@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/aakas/OneDrive/Desktop/nws/networksecurity/mlruns/0/models/m-354737fdd4174f83912f21bf0ca89e53/artifacts
+creation_timestamp: 1750675027074
+experiment_id: '0'
+last_updated_timestamp: 1750675031067
+model_id: m-354737fdd4174f83912f21bf0ca89e53
+model_type: null
+name: model
+source_run_id: 6952b5316cc64c4fb14eb9aafccc09c2
+status: 2
+status_message: null

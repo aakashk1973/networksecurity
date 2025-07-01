@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/aakas/OneDrive/Desktop/nws/networksecurity/mlruns/0/2325d44a1c8e435bba37de9b22bb4daa/artifacts
+end_time: 1751352250648
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2325d44a1c8e435bba37de9b22bb4daa
+run_name: persistent-tern-718
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751352242658
+status: 3
+tags: []
+user_id: aakas
