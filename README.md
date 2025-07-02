@@ -40,7 +40,7 @@ This dataset is designed for a network-security classifier that predicts whether
 
 ## ETL & Model Training Pipeline Architecture
 
-![ETL Pipeline Architecture](images/etl_pipeline.png)
+![ETL Pipeline Architecture]
 
 This end-to-end pipeline performs data extraction, validation, transformation, model training/evaluation and deployment:
 
