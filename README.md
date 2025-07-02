@@ -42,7 +42,7 @@ This dataset is designed for a network-security classifier that predicts whether
 
 ![ETL Pipeline Architecture]
 
-This end-to-end pipeline performs data extraction, validation, transformation, model training/evaluation and deployment:
+This end-to-end pipeline performs data extraction, validation, transformation, model training/evaluation, and Docker-based deployment:
 
 1. **Data Ingestion**  
    - **Source:** MongoDB  
@@ -69,16 +69,20 @@ This end-to-end pipeline performs data extraction, validation, transformation, m
    - **Metrics:** accuracy, F1, ROC-AUC (as configured)  
    - **Output Artifacts:** evaluation report  
 
-6. **Model Pushing**  
+6. **Model Pushing & Deployment**  
    - **Component:** `ModelPusherComponent`  
-   - **Decision:** if evaluation ≥ threshold → push to staging/production  
-   - **Deployment Targets:** AWS / Azure model registry or container endpoint  
-   - **Output Artifacts:** deployment manifests, endpoint URLs  
+   - **Decision:** if evaluation ≥ threshold → build Docker image  
+   - **Container Registry:** push image (e.g. ECR / ACR / Docker Hub)  
+   - **Artifacts Storage:** upload model binaries, logs, reports to an S3 bucket  
+   - **Deployment Targets:** deploy container to ECS / AKS / any Kubernetes cluster  
+   - **Output Artifacts:** S3 URLs, container endpoint  
 
 ---
 
 ### How to use
 
 1. Place your pipeline config files in `config/`  
-2. Run `python run_pipeline.py --config config/pipeline.yaml`  
-3. Check generated artifacts under `artifacts/` and deployed model in your cloud account  
+2. Build & run the pipeline:  
+   ```bash
+   python run_pipeline.py --config config/pipeline.yaml
+
